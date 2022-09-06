@@ -51,7 +51,7 @@ resource "aws_internet_gateway" "main" {
 }
 
 resource "aws_eip" "nat0" {
-  vpc      = true
+  vpc = true
 
   tags = {
     Name = "nat0"
@@ -59,7 +59,7 @@ resource "aws_eip" "nat0" {
 }
 
 resource "aws_eip" "nat1" {
-  vpc      = true
+  vpc = true
 
   tags = {
     Name = "nat1"
