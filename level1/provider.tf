@@ -6,7 +6,7 @@ terraform {
     }
   }
 
- backend "s3" {
+backend "s3" {
     bucket = "terraform-remote-state-dieg007"
     key    = "level1.tfstate"
     region = "us-east-1"
