@@ -7,4 +7,3 @@ module asg {
     load_balancer_sg  = module.lb.load_balancer_sg
     target_group_arn  = module.lb.target_group_arn
 }
-
