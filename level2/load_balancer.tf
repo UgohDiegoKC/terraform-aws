@@ -31,7 +31,7 @@ module "external_sg" {
         {
             from_port   = 0
             to_port     = 65535
-            protcol     = "tcp"
+            protocol     = "tcp"
             description = "https to ELB"
             cidr_blocks = "0.0.0.0/0"
         }
@@ -65,7 +65,7 @@ module "elb" {
                 healthy_threshold   = 5
                 unhealthy_threshold = 2
                 timeout             = 5
-                protcol             = "HTTP"
+                protocol             = "HTTP"
                 matcher             = "200"
             }
         }
@@ -74,7 +74,7 @@ module "elb" {
     https_listeners = [
         {
             port               = 443
-            protcol            = "HTTPS"
+            protocol            = "HTTPS"
             certificate_arn    = module.acm.acm_certificate_arn
             action_type        = "forward"
             target_group_index = 0
